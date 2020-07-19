@@ -1,0 +1,60 @@
+// colors
+// color primary scale
+$color-primary-light: #e50914;
+$color-primary-dark: #b9090b;
+// gray scale
+$full-light: #fff;
+$light: #e5e5e5;
+$gray-lightest: #ccc;
+$gray-lighter: #cbcbcb;
+$gray-light: #b3b3b3;
+$gray: #999;
+$gray-dark: #808080;
+$gray-darker: #333;
+$gray-darkest: #1a1a1a;
+$dark: #141414;
+$full-dark: #000;
+// transparents gray scale
+$gray-transparent-1: rgba(255, 255, 255, 0.3);
+$gray-transparent-2: rgba(20, 20, 20, 0);
+$gray-transparent-3: rgba(0, 0, 0, 0);
+$gray-transparent-4: rgba(0, 0, 0, 0.2);
+$gray-transparent-5: rgba(0, 0, 0, 0.3);
+$gray-transparent-6: rgba(0, 0, 0, 0.25);
+$gray-transparent-7: rgba(0, 0, 0, 0.35);
+$gray-transparent-8: rgba(0, 0, 0, 0.4);
+$gray-transparent-9: rgba(0, 0, 0, 0.5);
+$gray-transparent-10: rgba(0, 0, 0, 0.6);
+$gray-transparent-11: rgba(0, 0, 0, 0.7);
+$gray-transparent-12: rgba(0, 0, 0, 0.8);
+$gray-transparent-13: rgba(0, 0, 0, 0.85);
+$gray-transparent-14: rgba(133, 133, 133, 0.6);
+$gray-transparent-15: rgba(75, 75, 75, 0.6);
+$gray-transparent-16: rgba(51, 51, 51, 0.6);
+$gray-transparent-17: rgba(0, 0, 0, 0.9);
+// color for the forms
+$form-active-color: #454545;
+$form-font-color: #8c8c8c;
+$form-checkbox-background: #737373;
+// linear-gradients
+$background-header: linear-gradient(
+  180deg,
+  rgba(6, 6, 6, 1) 0%,
+  rgba(20, 20, 20, 1) 100%
+);
+
+// fonts
+$font-size-base: 16px;
+$font-color: $full-light;
+
+// breakpoints
+$breakpoint-smallest: 320px;
+$breakpoint-xxs: 375px;
+$breakpoint-xs: 425px;
+$breakpoint-s: 620px;
+$breakpoint-m: 768px;
+$breakpoint-l: 1024px;
+$breakpoint-xl: 1440px;
+
+//header height
+$header-height: 68px;
