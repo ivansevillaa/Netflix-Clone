@@ -13,6 +13,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  devServer: {
+    historyApiFallback: true,
+  },
   module: {
     rules: [
       {
@@ -34,6 +37,17 @@ module.exports = {
           { loader: MiniCssExtractPlugin.loader },
           'css-loader',
           'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|gif|jpg|tft|woff|eot|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/[hash].[ext]',
+            },
+          },
         ],
       },
     ],
