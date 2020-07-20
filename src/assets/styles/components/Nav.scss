@@ -1,0 +1,40 @@
+@import '../abstracts/Mixins.scss';
+
+.nav {
+  @include screen('s') {
+    @include fixed(top $header-height left -100vw bottom 0);
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    transition: 300ms;
+  }
+  @include screen('xs') {
+    padding-left: 5px;
+  }
+  flex-grow: 1;
+
+  & ul {
+    display: flex;
+    @include screen('s') {
+      margin: 0;
+      display: initial;
+    }
+  }
+
+  & li {
+    @include screen('s') {
+      margin: 15px 0;
+    }
+    @include font-styles-helvetica(inherit, $light, normal);
+    margin: 0 12px;
+    transition: color 400ms;
+  }
+
+  & li:hover {
+    color: $gray-light;
+  }
+
+  & a.selected {
+    @include font-styles-helvetica(inherit, $font-color, bold);
+  }
+}

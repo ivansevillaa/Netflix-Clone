@@ -1,0 +1,32 @@
+@import '../abstracts/Mixins.scss';
+
+.header {
+  @include screen('l') {
+    @include font-styles-helvetica(0.8rem);
+  }
+  @include size(100%, $header-height);
+  @include font-styles-helvetica(0.9rem);
+  @include fixed(top 0);
+  z-index: 2;
+  background: $background-header;
+  display: flex;
+  align-items: center;
+
+  &__logo,
+  &__logo img {
+    @include screen('m') {
+      width: 80px;
+      margin: 0 10px 0 0;
+    }
+    @include screen('s') {
+      flex-grow: 1;
+    }
+    width: 92px;
+    margin-right: 30px;
+  }
+
+  .header__actions {
+    display: flex;
+    align-items: center;
+  }
+}

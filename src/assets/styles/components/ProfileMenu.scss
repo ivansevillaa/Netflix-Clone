@@ -1,0 +1,60 @@
+@import '../abstracts/Mixins.scss';
+
+.profile-menu {
+  @include screen('xs') {
+    &--profile > img {
+      @include size(26px);
+    }
+  }
+  @include relative();
+
+  &--profile {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  &--profile > img {
+    @include screen('xs') {
+      @include size(26px);
+    }
+    @include size(32px);
+    object-fit: cover;
+    margin-right: 5px;
+  }
+
+  &--options {
+    @include screen('xs') {
+      @include absolute(top 38px);
+    }
+    @include absolute(top 45px right 0 left -100px);
+    display: none;
+    margin: 0;
+    background-color: $gray-transparent-13;
+    border: 1px solid $gray-darker;
+    box-sizing: content-box;
+    padding: 10px 0;
+  }
+
+  &--options .icon-triangle-up {
+    @include screen('xs') {
+      @include absolute(right 24px);
+    }
+    @include absolute(top -16px right 26px);
+    color: $light;
+  }
+
+  &--options li {
+    @include font-styles-helvetica(0.8rem);
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  &--options li:hover {
+    text-decoration: underline;
+  }
+
+  &:hover .profile-menu--options {
+    display: block;
+  }
+}
