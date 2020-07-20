@@ -1,0 +1,29 @@
+@import '../abstracts/Mixins.scss';
+
+.footer {
+  @include screen('s') {
+    padding: 0 20px;
+  }
+  @include font-styles-helvetica(14px, $gray-dark, normal);
+  padding: 0 125px;
+
+  &__icons {
+    margin-bottom: 10px;
+    a {
+      margin-right: 15px;
+    }
+  }
+
+  &__text,
+  &__description {
+    margin: 0 0 16px 0;
+  }
+
+  &__description {
+    font-size: 12px;
+  }
+
+  &__text:hover {
+    text-decoration: underline;
+  }
+}
