@@ -4,7 +4,7 @@ import Icon from './Icon';
 import '../assets/styles/components/ProfileMenu.scss';
 
 // TODO: This photo should get from the api
-import ProfilePhoto from '../assets/static/images/profile/profile7.jpg';
+import ProfilePhoto from '../assets/static/images/backgrounds/404_1.jpg';
 
 const profileOptions = [
   {

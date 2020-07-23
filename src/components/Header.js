@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 import Navbar from './Navbar';
 import Search from './Search';
 import ProfileMenu from './ProfileMenu';
 import '../assets/styles/layout/Header.scss';
-import Logo from '../assets/static/images/logos/netflix-logo.png';
+import RostenLogo from '../assets/static/images/logos/netflix-logo.png';
 import navbarLinks from '../utils/navbarLinks';
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
       {/* TODO: <Icon color="#fff" size="24" icon="menu or menu1" /> */}
       <i className="icon-menu burger-button" id="burger-button"></i>
       <Link to="/" className="header__logo">
-        <img src={Logo} alt="netflix logo" />
+        <Logo logo={RostenLogo} alt="rosten logo" />
       </Link>
       <Navbar itemsLinks={navbarLinks} />
       <div className="header__actions">
