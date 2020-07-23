@@ -1,0 +1,42 @@
+@import '../abstracts/Mixins.scss';
+
+.button {
+  @include font-styles-helvetica(16px, $dark, bold);
+  border: none;
+  margin-right: 10px;
+  padding: 7px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 125ms;
+
+  &--light {
+    background-color: $font-color;
+
+    &:hover {
+      background-color: $gray-lighter;
+    }
+  }
+
+  &--dark {
+    background: $gray-transparent-14;
+    color: $font-color;
+    &:hover {
+      background-color: $gray-transparent-15;
+    }
+  }
+
+  &--red {
+    background-color: $color-primary-light;
+    color: $font-color;
+  }
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

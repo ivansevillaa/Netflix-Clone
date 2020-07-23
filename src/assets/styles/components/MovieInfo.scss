@@ -1,0 +1,33 @@
+@import '../abstracts/Mixins.scss';
+
+.movie-info {
+  &__logo {
+    width: 80%;
+    object-fit: cover;
+  }
+
+  &__description {
+    @include font-styles-helvetica(19px, $font-color, normal);
+    margin: 10px 0 20px;
+    text-shadow: 2px 2px 4px $gray-transparent-8;
+  }
+
+  &__about {
+    @include font-styles-helvetica(16px, $gray-dark, normal);
+    margin: 2px 0 0 0;
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__meta {
+    @include font-styles-helvetica(16px, $font-color, bold);
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+
+    p {
+      margin: 0 8px 0 0;
+    }
+  }
+}

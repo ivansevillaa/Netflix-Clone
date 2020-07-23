@@ -1,0 +1,42 @@
+@import '../abstracts/Mixins.scss';
+
+.hero {
+  @include screen('s') {
+    display: none;
+  }
+
+  @include size(100%, 760px);
+  @include relative();
+  z-index: 1;
+
+  &__background {
+    @include size(inherit);
+  }
+
+  &__content {
+    @include absolute(top 0 right 0 left 0 bottom 0);
+    background: linear-gradient(
+      77deg,
+      $gray-transparent-10 0%,
+      $gray-transparent-3 85%
+    );
+    border-bottom: 10px solid $gray-darkest;
+
+    &--left {
+      @include absolute(top 180px);
+      width: 485px;
+    }
+
+    &--right {
+      @include absolute(right 0 bottom 240px);
+    }
+  }
+}
+
+.age-rating {
+  @include font-styles-helvetica(14px, null, normal);
+  background-color: $gray-transparent-16;
+  margin: 0;
+  padding: 6px 43px 6px 9px;
+  border-left: 3px solid $gray-lightest;
+}
