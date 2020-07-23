@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "fake-api": "json-server ./src/utils/initialState.json"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "url": "https://github.com/ivansevillaa/Netflix-Clone/issues"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "icomoon-react": "^2.0.16",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
@@ -33,6 +35,7 @@
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
