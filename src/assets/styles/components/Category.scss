@@ -1,0 +1,8 @@
+@import '../abstracts/Mixins.scss';
+
+.category {
+  &__title {
+    @include font-styles-helvetica(19px, $light, bold);
+    margin: 10px 0 -20px 2px;
+  }
+}

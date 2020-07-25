@@ -1,0 +1,9 @@
+@import '../abstracts/Mixins.scss';
+
+.movies {
+  @include screen('s') {
+    @include relative(top $header-height);
+  }
+  @include relative(top -170px);
+  z-index: 1;
+}

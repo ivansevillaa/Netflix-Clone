@@ -1,0 +1,150 @@
+@import '../abstracts/Mixins.scss';
+
+.carousel__item {
+  @include screen('l') {
+    flex: 0 0 24.7%;
+    height: 128px;
+  }
+  @include screen('m') {
+    flex: 0 0 32%;
+    height: 127px;
+  }
+  @include screen('s') {
+    flex: 0 0 48%;
+    height: 119px;
+  }
+  background-color: $dark;
+  height: 137px;
+  flex: 0 0 19.7%;
+  margin: 0 2px;
+  transition: transform 400ms ease 500ms;
+  transform-origin: center left;
+}
+.carousel__item:hover ~ .carousel__item {
+  transform: translateX(40%);
+}
+.carousel__item:hover {
+  transform: scale(1.4);
+}
+
+.carousel__item--original {
+  @include screen('l') {
+    height: 455px;
+  }
+  @include screen('m') {
+    height: 127px;
+  }
+  @include screen('s') {
+    height: 119px;
+  }
+  background-color: $dark;
+  height: 488px;
+}
+.carousel__item--original:hover {
+  transform: scale(1.1);
+}
+.carousel__item--original:hover ~ .carousel__item--original {
+  transform: translateX(10%);
+}
+
+.movie-item {
+  @include relative();
+  cursor: pointer;
+  &__image {
+    @include size(100%);
+    object-fit: cover;
+  }
+
+  &__overlay {
+    @include absolute(bottom -1px left 0 right 0 top 0);
+    background: linear-gradient(
+      0deg,
+      rgba(20, 20, 20, 0.5) 0%,
+      rgba(20, 20, 20, 0) 100%
+    );
+    opacity: 0;
+    transition: opacity 1000ms ease-in-out;
+  }
+
+  &__content-wrapper {
+    @include absolute(bottom 20px left 0 right 0);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+
+  &__more-info-button {
+    @include absolute(bottom 0 left 0 right 0);
+  }
+
+  &__description {
+    h4,
+    p {
+      cursor: pointer;
+      margin: 0;
+    }
+
+    h4 {
+      @include font-styles-helvetica(14px, $font-color, bold);
+      text-shadow: 2px 2px 4px $gray-transparent-8;
+      margin-top: 2px;
+    }
+    p {
+      @include font-styles-helvetica(10px, $font-color, normal);
+      display: inline;
+    }
+
+    button {
+      @include size(26px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      background-color: $font-color;
+      border-radius: 50%;
+      border: none;
+    }
+    button > svg {
+      // color: $dark;
+      // font-size: 16px;
+      text-align: center;
+      margin: 0 0 2px 2px;
+      cursor: pointer;
+    }
+
+    .age-rated {
+      border: 1px solid $gray-transparent-1;
+      padding: 1px 5px;
+      margin-right: 6px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &__buttons > svg {
+    background-color: $gray-transparent-9;
+    border: solid 1px $gray-transparent-1;
+    border-radius: 50%;
+    padding: 3px;
+    margin: 2px 0;
+    transition: 300ms;
+  }
+  &__buttons > svg:hover {
+    border: solid 1px $font-color;
+    background-color: $gray-transparent-11;
+  }
+
+  &__more-info-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.movie-item:hover .movie-item__overlay {
+  transition: opacity 1000ms ease-in-out;
+  opacity: 1;
+}
