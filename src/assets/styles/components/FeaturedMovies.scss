@@ -1,0 +1,54 @@
+@import '../abstracts/Mixins.scss';
+
+.featured-movie {
+  @include screen('m') {
+    display: none;
+  }
+
+  .container {
+    margin-top: 40px;
+    padding: 30px 53px 60px;
+    display: grid;
+    grid-template-rows: 460px;
+    grid-template-columns: minmax(300px, 1fr) minmax(250px, 420px);
+    gap: 40px;
+
+    .featured-movie__cover {
+      @include relative();
+    }
+
+    .featured-movie__cover > img {
+      @include size(100%);
+    }
+
+    .featured-movie__cover > .trailer-info-action {
+      @include absolute(bottom 40px right 0);
+      @include screen('l') {
+      }
+    }
+
+    .featured-movie__info {
+      align-self: center;
+    }
+
+    .featured-movie__info > .movie-info__description {
+      margin: 0;
+      @include screen('l') {
+        font-size: 16px;
+      }
+    }
+
+    .featured-movie__info > .movie-info__buttons {
+      margin: 23px 0 15px;
+      @include screen('l') {
+        font-size: 14px;
+      }
+
+      svg {
+        @include screen('l') {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
