@@ -6,10 +6,10 @@ import convertMinutes from '../utils/convertMinutes';
 
 const CarouselItem = (props) => {
   const [morInfoColor, setMoreInfoColor] = useState('#e5e5e5');
-  const { cover, title, duration, age_rate } = props;
+  const { cover, title, duration, age_rate, modifier } = props;
 
   return (
-    <article className="carousel__item movie-item">
+    <article className={`carousel__item movie-item ${modifier}`}>
       {/* TODO: here can be a video or image. */}
       <img
         className="movie-item__image"
@@ -53,6 +53,11 @@ CarouselItem.propTypes = {
   title: PropTypes.string.isRequired,
   duration: PropTypes.number.isRequired,
   age_rate: PropTypes.number.isRequired,
+  modifier: PropTypes.string,
+};
+
+CarouselItem.defaultProps = {
+  modifier: '',
 };
 
 export default CarouselItem;

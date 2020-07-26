@@ -16,13 +16,13 @@
   &__logo img {
     @include screen('m') {
       width: 80px;
-      margin: 0 10px 0 0;
+      margin: 4px 10px 0 0;
     }
     @include screen('s') {
       flex-grow: 1;
     }
     width: 92px;
-    margin-right: 30px;
+    margin: 2px 30px 0 0;
   }
 
   .header__actions {

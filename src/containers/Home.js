@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Category from '../components/Category';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
+import FeaturedMovie from '../components/FeaturedMovie';
 import '../assets/styles/pages/Home.scss';
 
 const API_URL = 'http://localhost:3000/movies';
@@ -38,7 +39,12 @@ const Home = () => {
 
   return (
     <>
-      <Hero movie={data[0]} />
+      <Hero
+        cover={data[0].cover_src}
+        age_rate={data[0].age_rate}
+        logo={data[0].logo_src}
+        description={data[0].description}
+      />
       <main className="movies">
         {/* TODO: category must be returned by a map function(e.g categories.map(i => <tatata />)) */}
         <Category title="My List">
@@ -61,6 +67,28 @@ const Home = () => {
             {data.map((movie) => {
               return (
                 <CarouselItem
+                  key={movie.id}
+                  cover={movie.cover_src}
+                  title={movie.title}
+                  duration={movie.duration}
+                  age_rate={movie.age_rate}
+                />
+              );
+            })}
+          </Carousel>
+        </Category>
+        <FeaturedMovie
+          cover={data[1].cover_src}
+          age_rate={data[1].age_rate}
+          logo={data[1].logo_src}
+          description={data[1].description}
+        />
+        <Category title="Netflix Originals">
+          <Carousel>
+            {data.map((movie) => {
+              return (
+                <CarouselItem
+                  modifier="carousel__item--original"
                   key={movie.id}
                   cover={movie.cover_src}
                   title={movie.title}

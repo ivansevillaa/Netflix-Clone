@@ -1,22 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MovieInfo from './MovieInfo';
 import Logo from './Logo';
 import Description from './Description';
 import Button from './Button';
 import '../assets/styles/layout/Hero.scss';
 
-const Hero = ({ movie }) => {
-  const { cover_src, logo_src, description, age_rate } = movie;
+const Hero = (props) => {
+  const { cover, logo, description, age_rate } = props;
 
   return (
     <section className="hero">
       {/* TODO: here can be a video or image */}
-      <img className="hero__background" src={cover_src} />
+      <img className="hero__background" src={cover} />
       <div className="container hero__content">
         <MovieInfo className="hero__content--left">
           <Logo
             className="movie-info__logo"
-            logo={logo_src}
+            logo={logo}
             alt="movie logo"
           />
           <Description
@@ -51,5 +52,12 @@ const Buttons = () => (
     />
   </div>
 );
+
+Hero.propTypes = {
+  cover: PropTypes.string.isRequired,
+  logo: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  age_rate: PropTypes.number.isRequired,
+};
 
 export default Hero;
