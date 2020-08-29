@@ -11,9 +11,7 @@ The next step will be to make the API with node.js and express, you will see the
 ...
 
 ### Tech Stack
-#### For the layout:  
-  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-512.png" width="50" height="50"><img src="https://www.shareicon.net/data/256x256/2016/07/10/119876_css_512x512.png" width="60" height="60">
- 
+...
 
 ### Features
 ...
